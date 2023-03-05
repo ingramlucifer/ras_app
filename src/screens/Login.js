@@ -11,7 +11,7 @@ import {
   } from "react-native";
   import React, { useState } from "react";
   import DefaultInput from "../components/DefaultInput";
-  import mysmc_logo from "../assets/images/Mysmc.png";
+  // import mysmc_logo from "../assets/images/Mysmc.png";
   import RasLoading from "../components/loaders/RasLoading";
  //import { loginUser } from "../api/mysql";
   
@@ -53,13 +53,13 @@ import {
           }}
         >
           <View style={styles.image}>
-            <ImageBackground
+            {/* <ImageBackground
               ImageBackground
               source={mysmc_logo}
               style={styles.image_background}
               imageStyle={{ borderRadius: 2, resizeMode: "contain", height: 100 }}
                
-            />
+            /> */}
           </View>
           
           

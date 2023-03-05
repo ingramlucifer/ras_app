@@ -3,6 +3,8 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import Login from "../screens/Login";
+import { SCREENS_NAME } from "../utils/system";
+import Home from "../screens";
 
 const Stack = createStackNavigator();
 const navTheme = {
@@ -18,7 +20,12 @@ export default function Navigation() {
     <NavigationContainer theme={navTheme}>
       <Stack.Navigator>
         <Stack.Screen
-          name="Login"
+          name={SCREENS_NAME.Home}
+          component={Home}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SCREENS_NAME.Login}
           component={Login}
           options={{ headerShown: false }}
         />

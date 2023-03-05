@@ -22,6 +22,7 @@ export default function DefaultInput({
   prefix = "",
   maxLength = 250,
   topPrefix = 19,
+  customTextAlign = "center"
 }) {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -40,7 +41,7 @@ export default function DefaultInput({
           },
           { paddingRight: isPassword ? 40 : 15 },
           { height: multiLine ? 90 : 45 },
-          { textAlign: multiLine ? "left" : "center" },
+          { textAlign: multiLine ? "left" : customTextAlign },
         ]}
         onChangeText={onValueChange}
         value={value}
