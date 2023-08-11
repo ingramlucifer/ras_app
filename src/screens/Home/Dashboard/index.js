@@ -8,7 +8,8 @@ import BottomModal from "../../../components/modals/BottomModal";
 import { APP_COLORS } from "../../../styling/colors";
 import ServicesFilters from "../../../components/filters/ServicesFilters";
 import { TABS } from "../../../utils/system";
-
+import Monitoring from "./Monitoring";
+import DefaultInput from "../../../components/DefaultInput";
 
 export default function Dashboard({ navigation, route }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -24,8 +25,18 @@ export default function Dashboard({ navigation, route }) {
 
   return (
     <SafeAreaView style={[SAFE_AREA_VIEW.container]}>
+      <DefaultInput
+        placeholder="Search app.."
+        customTextAlign="left"
+        borderColor="transparent"
+        
+        // isPassword
+        // value={password}
+        // onValueChange={(value) => setPassword(value)}
+        // hasError={hasError && !password.length}
+      />
       <HeaderDashboard onShowFilterService={onShowFilterService}/>
-      <TabBarCategorisation
+      {/* <TabBarCategorisation
         sections={TABS || []}
         navigation={navigation}
         onChangeTab={onChangeTab}
@@ -39,7 +50,8 @@ export default function Dashboard({ navigation, route }) {
         sliderBackgroundColor={APP_COLORS.PRIMARY_COLOR.color}
         borderWidth={2}
         borderColor={APP_COLORS.LIGHT_COLOR.color}
-      />
+      /> */}
+      <Monitoring />
     </SafeAreaView>
   );
 }

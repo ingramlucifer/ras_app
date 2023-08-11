@@ -40,7 +40,7 @@ export default function DefaultInput({
             color: editable ? "#000" : "gray",
           },
           { paddingRight: isPassword ? 40 : 15 },
-          { height: multiLine ? 90 : 45 },
+          { height: multiLine ? 90 : 40 },
           { textAlign: multiLine ? "left" : customTextAlign },
         ]}
         onChangeText={onValueChange}

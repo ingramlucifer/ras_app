@@ -46,6 +46,42 @@ const DATA = [
     label: "Sugu",
     status: EApplicationStatus.success
   },
+  {
+    code: 7,
+    service: "Corporate",
+    label: "Oracle",
+    status: EApplicationStatus.success
+  },
+  {
+    code: 8,
+    service: "Customer care",
+    label: "Sugu",
+    status: EApplicationStatus.success
+  },
+  {
+    code: 9,
+    service: "Corporate",
+    label: "Oracle",
+    status: EApplicationStatus["service-failure"]
+  },
+  {
+    code: 10,
+    service: "Customer care",
+    label: "Sugu",
+    status: EApplicationStatus["internal-failure"]
+  },
+  {
+    code: 11,
+    service: "Corporate",
+    label: "Oracle",
+    status: EApplicationStatus.success
+  },
+  {
+    code: 12,
+    service: "Customer care",
+    label: "Sugu",
+    status: EApplicationStatus.success
+  },
 ];
 
 export default function ApplicationsList({}) {

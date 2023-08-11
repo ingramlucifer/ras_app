@@ -37,13 +37,26 @@ export const getStatusColor = (status = "") => {
   try {
     switch (status) {
       case EApplicationStatus.success:
-        return APP_COLORS.GREEN_COLOR.color;
+        return {
+          color: APP_COLORS.GREEN_COLOR_TRANSPARENT.color,
+          textColor: APP_COLORS.GREEN_COLOR.color,
+        }
       case EApplicationStatus["service-failure"]:
-        return APP_COLORS.RED_COLOR.color;
+        return {
+          color: APP_COLORS.RED_COLOR_TRANSPARENT.color,
+          textColor: APP_COLORS.RED_COLOR.color,
+        }
+
       case EApplicationStatus["internal-failure"]:
-        return APP_COLORS.BLUE_COLOR.color;
+        return {
+          color: APP_COLORS.BLUE_COLOR_TRANSPARENT.color,
+          textColor: APP_COLORS.BLUE_COLOR.color,
+        }
       default:
-        return APP_COLORS.WHITE_COLOR.color;
+        return {
+          color: APP_COLORS.WHITE_COLOR.color,
+          textColor: APP_COLORS.WHITE_COLOR.color,
+        }
     }
   } catch (error) {}
 };

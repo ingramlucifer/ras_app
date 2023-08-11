@@ -1,19 +1,22 @@
 import { StyleSheet } from "react-native";
 import { APP_COLORS } from "./colors";
 import { FONTS } from "./polices";
+import { Dimensions } from "react-native";
+
+const ITEM_HEIGHT = Math.ceil(Dimensions.get("screen").width / 8);
 
 export const ITEM_APPLICATION_CARD_STYLE = StyleSheet.create({
   container: {
     padding: 5,
-    margin: 5,
-    borderRadius: 5,
-    backgroundColor: APP_COLORS.WHITE_COLOR.color,
-    borderWidth: 1,
-    borderColor: 'rgba(84, 3, 117, 0.1)'
+    marginBottom: 5,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   top: {
     flexDirection: "row",
-    padding: 5
+    padding: 5,
+    backgroundColor: "yellow"
   },
   top_right: {
     flexDirection: "row",
@@ -26,10 +29,6 @@ export const ITEM_APPLICATION_CARD_STYLE = StyleSheet.create({
     padding: 5,
     backgroundColor: 'rgba(84, 3, 117, 0.8)',//APP_COLORS.PRIMARY_COLOR.color,
     borderRadius: 5
-  },
-  service_name: {
-    fontFamily: FONTS.regular,
-    color: APP_COLORS.WHITE_COLOR.color
   },
   center: {
     padding: 5,
@@ -51,6 +50,38 @@ export const ITEM_APPLICATION_CARD_STYLE = StyleSheet.create({
     marginBottom: 10
   },
   status_text: {
-    color: APP_COLORS.WHITE_COLOR.color,
-  }
+    fontFamily: FONTS.bold,
+  },
+
+
+  left: {
+    flex: 1,
+  },
+  right: {
+    flex: 2.5,
+  },
+  service: {
+    height: ITEM_HEIGHT,
+    justifyContent: "center",
+    borderRightWidth: 2,
+    backgroundColor: APP_COLORS.WHITE_COLOR.color,
+    borderTopRightRadius: 50,
+    borderBottomRightRadius: 50,
+  },
+  service_name: {
+    marginLeft: 5,
+    fontFamily: FONTS.bold,
+    color: APP_COLORS.BLACK_COLOR.color,
+    fontSize: 16
+  },
+  status: {
+    borderTopLeftRadius: 50,
+    borderBottomLeftRadius: 50,
+    // width: ITEM_HEIGHT,
+    height: ITEM_HEIGHT,
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
+
 });
