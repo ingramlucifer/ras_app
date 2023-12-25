@@ -14,7 +14,7 @@ export const APP_COLORS = StyleSheet.create({
     color: "#FFF",
   },
   LIGHT_COLOR: {
-    color: "#F8F8F8",
+    color: "#F3F3F3",
   },
   BLACK_COLOR: {
     color: "#000",

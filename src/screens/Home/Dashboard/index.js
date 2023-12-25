@@ -1,7 +1,8 @@
 import { View, Text } from "react-native";
 import React, { useState } from "react";
 import { SAFE_AREA_VIEW } from "../../../styling/screnn";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 import HeaderDashboard from "../../../components/headers/HeaderDashboard";
 import TabBarCategorisation from "../../../components/tabbar/TabBarCategorisation";
 import BottomModal from "../../../components/modals/BottomModal";
@@ -10,6 +11,7 @@ import ServicesFilters from "../../../components/filters/ServicesFilters";
 import { TABS } from "../../../utils/system";
 import Monitoring from "./Monitoring";
 import DefaultInput from "../../../components/DefaultInput";
+import Services from "./Services";
 
 export default function Dashboard({ navigation, route }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -24,8 +26,8 @@ export default function Dashboard({ navigation, route }) {
   };
 
   return (
-    <SafeAreaView style={[SAFE_AREA_VIEW.container]}>
-      <DefaultInput
+    <SafeAreaView style={[SAFE_AREA_VIEW.container]} edges={['top', 'right', 'bottom', 'left']}>
+      {/* <DefaultInput
         placeholder="Search app.."
         customTextAlign="left"
         borderColor="transparent"
@@ -34,8 +36,8 @@ export default function Dashboard({ navigation, route }) {
         // value={password}
         // onValueChange={(value) => setPassword(value)}
         // hasError={hasError && !password.length}
-      />
-      <HeaderDashboard onShowFilterService={onShowFilterService}/>
+      /> */}
+      {/* <HeaderDashboard onShowFilterService={onShowFilterService}/> */}
       {/* <TabBarCategorisation
         sections={TABS || []}
         navigation={navigation}
@@ -51,7 +53,8 @@ export default function Dashboard({ navigation, route }) {
         borderWidth={2}
         borderColor={APP_COLORS.LIGHT_COLOR.color}
       /> */}
-      <Monitoring />
+      {/* <Monitoring /> */}
+      <Services />
     </SafeAreaView>
   );
 }

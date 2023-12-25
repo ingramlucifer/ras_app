@@ -4,6 +4,7 @@ import { FONTS } from "./polices";
 import { Dimensions } from "react-native";
 
 const ITEM_HEIGHT = Math.ceil(Dimensions.get("screen").width / 8);
+const PREVIEW_SIZE = Math.ceil(Dimensions.get("screen").width / 8);
 
 export const ITEM_APPLICATION_CARD_STYLE = StyleSheet.create({
   container: {
@@ -85,3 +86,44 @@ export const ITEM_APPLICATION_CARD_STYLE = StyleSheet.create({
   },
 
 });
+
+export const CARD_SERVICE_STYLE = StyleSheet.create({
+  main: {
+    backgroundColor: "white",
+    borderRadius: 5,
+    padding: 10,
+    margin: 5,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.18,
+    elevation: 1,
+    shadowColor: '#DCDADA',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  left_preview:{
+    width: PREVIEW_SIZE,
+    height: PREVIEW_SIZE,
+    backgroundColor: APP_COLORS.SECONDARY_COLOR.color,
+    borderRadius: 7,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  left_preview_title: {
+    fontFamily: FONTS.bold,
+    fontSize: 12,
+    color: APP_COLORS.WHITE_COLOR.color
+  },
+  right: {
+    flex: 1,
+    marginLeft: 5
+  },
+  title: {
+    fontFamily: FONTS.bold,
+    fontSize: 12,
+    // color: APP_COLORS.WHITE_COLOR.color
+  }
+})

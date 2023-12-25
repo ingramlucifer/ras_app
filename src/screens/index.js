@@ -1,5 +1,7 @@
-import { AntDesign, Feather, Ionicons, Octicons } from "@expo/vector-icons";
+import { AntDesign, Feather } from "@expo/vector-icons";
 import React from "react";
+import { Platform } from "react-native";
+
 import { AnimatedTabBarNavigator } from "react-native-animated-nav-tab-bar";
 import { APP_COLORS } from "../styling/colors";
 import { VIEWS_NAME } from "../utils/system";
@@ -32,8 +34,8 @@ export default ({ navigation }) => {
       appearance={{
         topPadding: 7,
         horizontalPadding: 10,
-        // whenActiveShow: "icon-only",
-        whenInactiveShow: "icon-only",
+        whenInactiveShow: "icon-label",
+        bottomPadding: Platform.OS === "ios" && Platform.Version >= 17 ? 20 : 2,
       }}
     >
       <Tabs.Screen
